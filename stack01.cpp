@@ -24,17 +24,15 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
         x = 0;
         day.pop();
         x++;
-        if (day.empty()) {  // 抗寇贸府
-            answer.push_back(x);
-            break;
-        }
+
+        if (day.empty()) answer.push_back(x); break;
+        
         while (day.top() - now <= 0) {
             day.pop();
             x++;
-            if (day.empty()) { // 抗寇贸府
-                break;
-            }
+            if (day.empty()) break;
         }
+
         answer.push_back(x);
     }
 
